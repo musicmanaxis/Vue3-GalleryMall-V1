@@ -1,0 +1,34 @@
+    <!-- 분석 순서
+    1.index.html: Vue.js 애플리케이션의 시작점
+    2.main.js: 애플리케이션 초기화 및 루트 컴포넌트 설정. main.js에서 Vue 인스턴스가 생성되고, App.vue 컴포넌트를 루트 컴포넌트로 등록
+    3.App.vue: 최상위 구조 확인.<template>: 화면에 렌더링할 HTML 구조. <script>: 데이터를 관리하거나 하위 컴포넌트를 가져오는 로직. <style>: 스타일 정의
+    4.router/index.js: 라우터로 연결된 컴포넌트 확인 (필요 시).
+    5.하위 컴포넌트: /components: 재사용 가능한 컴포넌트. /views: 페이지 단위 컴포넌트.
+    6.상태 관리: 전역 상태나 API 호출 흐름 확인. -->
+<!DOCTYPE html>
+<html lang="">
+  
+<head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- https://cdnjs.com/libraries/font-awesome/4.7.0 3번째줄 copy ling Tag에서 추가-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- index.html <head>에서 하단 /bootstrap추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+   
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    
+    <div id="app"></div>
+    <!-- index.html <body>에서 하단 bootstrap추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  </body>
+</html>
