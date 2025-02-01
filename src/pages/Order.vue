@@ -106,7 +106,10 @@ import router from '@/scripts/router';
       
      const submit=()=>{ 
        if(state.form.cardNumber.length<17){       
-        state.form.orderDate = new Date().toISOString().slice(0, 19); // ISO-8601 포맷의 주문 날짜 생성
+        const now = new Date();
+        now.setHours(now.getHours() + 9);  // UTC → KST 변환, 현지시간을 한국시간으로 변환
+        state.form.orderDate = now.toISOString().slice(0, 19).replace("T", " "); 
+
      //$주문날짜 입력하기 ->아직 실험중  
         console.log("state.form.orderDate:", state.form.orderDate);
 
